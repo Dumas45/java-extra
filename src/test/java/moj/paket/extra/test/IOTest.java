@@ -28,7 +28,6 @@ class IOTest {
         int a = 1;
         int b = 1;
         while (a < 100000) {
-            System.out.println(a);
             assertArrayEquals(bytes = getPseudoRandomBytes(a), IO.getBytes(new ByteArrayInputStream(bytes)));
             int t = a;
             a = a + b;
