@@ -15,10 +15,6 @@ class IOTest {
     @org.junit.jupiter.api.Test
     void getBytes_InputStream() throws Exception {
         byte[] bytes;
-        for (int i = 0; i < 100; i++) {
-            Assertions.assertArrayEquals(bytes = getPseudoRandomBytes(i), IO.getBytes(new ByteArrayInputStream(bytes)));
-        }
-
         assertArrayEquals(bytes = getPseudoRandomBytes(0), IO.getBytes(new ByteArrayInputStream(bytes)));
 
         assertArrayEquals(bytes = getPseudoRandomBytes(1023), IO.getBytes(new ByteArrayInputStream(bytes)));
